@@ -1,0 +1,36 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<style>
+	.account
+	{
+		position: absolute;
+		right: 2px;
+	}
+	</style>
+<body>
+	<div class="container">
+		<div class="header">
+		<a href="articles/new" class="btn btn-success mb-2 mt-2"> New Article </a>
+		<a href="/account" class="account btn btn-secondary mb-2 mt-2 mr-2">My Account</a>
+         </div>
+		<% articles.forEach(article => { %>
+		<div class="card">
+			<div class="card-body">
+				<h2 class="card-title"> <%= article.title %> </h2>
+				<p class="card-date"> <%= article.date.toLocaleDateString() %></p>
+				<div class="card-description"> <%= article.description %></div>
+			</div>
+			<a href="/articles/<%= article.slug %>" class="btn btn-primary m-2">Read More </a>
+			<form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
+				<label class="ml-2">author</label> <b class="mb-2"><%= article.email %></b>
+          </form>
+		</div>
+	<% }) %>
+	</div>
+</body>
+</html>

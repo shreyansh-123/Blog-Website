@@ -1,0 +1,22 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+	<h1>Login</h1>
+	<div class="container">
+		<form action="/login" method="POST">
+			<label for="email">Email</label>
+			<input type="email" name="email" class="email form-control" placeholder="Enter your Email">
+			<label for="password">Password</label>
+			<input type="password" name="password" class="password form-control" placeholder="Enter your Password">
+			<button type="submit" class="btn btn-success mt-2">Login</button>
+		</form>
+		<a href="/signup" class="btn btn-secondary">SignUp</a>
+	</div>
+	</body>
+</html>

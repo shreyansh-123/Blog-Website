@@ -1,0 +1,23 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<style>
+	</style>
+<body>
+	<div class="container">
+		<h1 class="title"><%= article.title %></h1>
+		
+		<div class="text-muted mb-2"><%= article.date.toLocaleDateString() %></div>
+		<h4> <%= article.description %></h4>
+		<a href="/" class=" btn btn-secondary"> All Articles</a>
+
+		<div class="markdown mt-2 mb-4">
+			<%= article.markdown %>
+		</div>
+		<label class="email">Author</label>
+		<b class="ml-2"><%= article.email %></b>
+	</div>
